@@ -1,6 +1,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/harrywynnwill/pairing-tests/badge.svg?branch=master)](https://coveralls.io/github/harrywynnwill/pairing-tests?branch=master)
 
-
+refactor rules from module to class
+gambler can go to bank
 
 # Fruit machine
 

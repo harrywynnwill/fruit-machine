@@ -1,5 +1,4 @@
 require 'fruitmachine'
-require 'gambler'
 require 'bank'
 
 describe "FEATURE TESTS" do

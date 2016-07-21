@@ -2,8 +2,9 @@ require 'fruitmachine'
 require 'rules'
 
 describe FruitMachine do
-  subject(:fruitmachine) { FruitMachine.new bank {include Rules}}
+  subject(:fruitmachine) { FruitMachine.new bank, rules }
   let(:bank) { instance_spy ( "bank" )}
+  let(:rules) {instance_spy "rules"}
   describe '#all_the_same_colour' do
     it 'returns true if all the slots are the same' do
       allow(fruitmachine.wheel).to receive(:sample).and_return(:blue)

@@ -5,39 +5,42 @@ class Bank
   FIVE = 5
   HALVE = 0.5
   NO_MONEY = "sorry the machine has no jackpot"
+  DEFAULT_CREDIT = 20
 
-  attr_reader :float, :jackpot, :gambler
+  attr_reader :float, :jackpot, :gambler, :account
 
-  def initialize gambler = Gambler.new
-    @gambler = gambler
+      DEFAULT_CREDIT = 20
+
+  def initialize ammount = DEFAULT_CREDIT
+    @account = ammount
     @float = FLOAT
     @jackpot = @float
   end
 
   def play_game coin = COIN
-    @gambler.debit coin
+    debit coin
     add_to_jackpot coin
   end
 
   def payout_five_times coin = COIN
     5.times do
       if jackpot_empty?
-         @gambler.credit coin
+         credit coin
       else
-        @gambler.credit coin
+        credit coin
         remove_from_jackpot coin
       end
     end
   end
 
   def payout_half
-    @gambler.credit (HALVE * @jackpot).round
+    credit (HALVE * @jackpot).round
     remove_from_jackpot (HALVE * @jackpot).round
   end
 
   def hit_the_jackpot
     raise NO_MONEY if jackpot_empty?
-    @gambler.credit @jackpot
+    credit @jackpot
     remove_from_jackpot @jackpot
   end
 
@@ -54,4 +57,13 @@ class Bank
   def jackpot_empty?
     @jackpot == 0
   end
+
+  def debit ammount
+    @account -= ammount
+  end
+
+  def credit ammount
+    @account += ammount
+  end
+
 end

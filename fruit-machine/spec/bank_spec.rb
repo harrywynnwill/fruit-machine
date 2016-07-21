@@ -1,7 +1,6 @@
 require 'bank'
 describe Bank do
-  subject(:bank) { Bank.new gambler }
-  let(:gambler) { instance_spy ( "Gambler" ) }
+  subject(:bank) { Bank.new }
   let(:float) { 50 }
   let(:half_jackpot) {-bank.jackpot/2}
   let(:coin) {1}
@@ -13,29 +12,24 @@ describe Bank do
   describe "#play_game" do
     it "adds a coin to the jackpot" do
       expect{ bank.play_game }.to change { bank.jackpot }.by coin
-      expect(gambler).to have_received(:debit)
       expect(bank.jackpot).not_to eq 0
-
     end
   end
   describe "#payout_five_times" do
     it "pays out five times the stake from the jackpot" do
       expect{ bank.payout_five_times }.to change {bank.jackpot}.by -five_coins
       expect(bank.jackpot).not_to eq 1
-      expect(gambler).to have_received(:credit).exactly(5).times
     end
   end
   describe "#payout_half" do
     it "pays out halve the jackpot" do
       expect{bank.payout_half}.to change {bank.jackpot}.by half_jackpot
-      expect(gambler).to have_received(:credit)
     end
   end
   describe "#hit_the_jackpot" do
     it "pays out the jackpot" do
       bank.hit_the_jackpot
       expect(bank.jackpot).to eq 0
-      expect(gambler).to have_received(:credit)
     end
   end
   describe "#add_to_jackpot" do

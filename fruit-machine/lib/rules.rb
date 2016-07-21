@@ -1,4 +1,4 @@
-module Rules
+class Rules
 
     def all_the_same_colour turn
       turn.all? {|slot| slot == turn[0]}

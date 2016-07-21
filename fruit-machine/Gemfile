@@ -1,4 +1,8 @@
 source 'http://rubygems.org'
 
-gem "rspec"
+
+gem "sinatra"
 gem 'coveralls', require: false
+gem 'capybara'
+gem "rspec-sinatra"
+gem "selenium-webdriver"

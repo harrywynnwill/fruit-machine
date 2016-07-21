@@ -1,10 +1,9 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/harrywynnwilliams/Projects/pairing-tests/fruit-machine/spec/bank_spec.rb": [
+      "/Users/harrywynnwilliams/Projects/tech_tests/pairing-tests/fruit-machine/spec/bank_spec.rb": [
         1,
         1,
-        8,
         8,
         2,
         2,
@@ -18,15 +17,6 @@
         1,
         4,
         1,
-        1,
-        null,
-        null,
-        null,
-        1,
-        1,
-        4,
-        1,
-        1,
         null,
         null,
         1,
@@ -36,6 +26,10 @@
         null,
         null,
         1,
+        1,
+        4,
+        null,
+        null,
         1,
         1,
         1,
@@ -56,13 +50,16 @@
         null,
         null
       ],
-      "/Users/harrywynnwilliams/Projects/pairing-tests/fruit-machine/lib/bank.rb": [
+      "/Users/harrywynnwilliams/Projects/tech_tests/pairing-tests/fruit-machine/lib/bank.rb": [
         1,
         null,
         1,
         1,
         1,
         1,
+        1,
+        1,
+        null,
         1,
         null,
         1,
@@ -113,10 +110,18 @@
         1,
         17,
         null,
+        null,
+        1,
+        5,
+        null,
+        null,
+        1,
+        19,
+        null,
+        null,
         null
       ],
-      "/Users/harrywynnwilliams/Projects/pairing-tests/fruit-machine/spec/feature_spec.rb": [
-        1,
+      "/Users/harrywynnwilliams/Projects/tech_tests/pairing-tests/fruit-machine/spec/feature_spec.rb": [
         1,
         1,
         null,
@@ -175,7 +180,7 @@
         null,
         null
       ],
-      "/Users/harrywynnwilliams/Projects/pairing-tests/fruit-machine/lib/fruitmachine.rb": [
+      "/Users/harrywynnwilliams/Projects/tech_tests/pairing-tests/fruit-machine/lib/fruitmachine.rb": [
         1,
         null,
         1,
@@ -183,11 +188,10 @@
         1,
         null,
         1,
-        null,
-        1,
         1,
         null,
         1,
+        11,
         11,
         11,
         11,
@@ -218,47 +222,41 @@
         null,
         null
       ],
-      "/Users/harrywynnwilliams/Projects/pairing-tests/fruit-machine/lib/rules.rb": [
+      "/Users/harrywynnwilliams/Projects/tech_tests/pairing-tests/fruit-machine/lib/rules.rb": [
         1,
         null,
         1,
-        20,
+        14,
         null,
         null,
         1,
-        2,
+        1,
         null,
         null,
         1,
-        13,
+        10,
         null,
         null,
         null
       ],
-      "/Users/harrywynnwilliams/Projects/pairing-tests/fruit-machine/lib/gambler.rb": [
-        1,
-        1,
-        null,
+      "/Users/harrywynnwilliams/Projects/tech_tests/pairing-tests/fruit-machine/spec/features/enter_bet_spec.rb": [
         1,
         null,
         1,
-        7,
-        null,
-        null,
         1,
-        5,
-        null,
-        null,
         1,
-        13,
+        0,
+        0,
+        0,
         null,
         null
       ],
-      "/Users/harrywynnwilliams/Projects/pairing-tests/fruit-machine/spec/fruitmachine_spec.rb": [
+      "/Users/harrywynnwilliams/Projects/tech_tests/pairing-tests/fruit-machine/spec/fruitmachine_spec.rb": [
         1,
         1,
         null,
         1,
+        8,
         8,
         8,
         1,
@@ -316,29 +314,6 @@
         null,
         1,
         1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        null
-      ],
-      "/Users/harrywynnwilliams/Projects/pairing-tests/fruit-machine/spec/gambler_spec.rb": [
-        1,
-        1,
-        4,
-        null,
-        null,
-        1,
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
         1,
         1,
         1,
@@ -348,6 +323,6 @@
         null
       ]
     },
-    "timestamp": 1468587023
+    "timestamp": 1469110845
   }
 }
