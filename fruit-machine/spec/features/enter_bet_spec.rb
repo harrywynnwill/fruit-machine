@@ -1,10 +1,20 @@
 require 'spec_helper'
 
-feature 'Enter bet' do
-  scenario 'Submitting bet amount' do
+feature 'adding credit to the machine' do
+  scenario 'adds 50 credits to the machine' do
     visit('/')
-      fill_in :bet_amount, with: 1
-      click_button 'Submit'
-      expect(page).to have_content 1
+    fill_in :credit, with: 50
+    click_button 'Submit'
+    expect(page).to have_content '50 Credits'
+  end
+end
+
+feature 'removes a credit when the player gambles' do
+  scenario 'the gambler starts with 20 credits' do
+    visit('/')
+    fill_in :credit, with: 50
+    click_button 'Submit'
+    click_button 'Bet'
+    expect(page).to have_content '49 Credits'
   end
 end

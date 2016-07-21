@@ -1,13 +1,24 @@
 require 'sinatra/base'
+require_relative './lib/bank'
+
+
 
 class Fruity < Sinatra::Base
+  enable :sessions
+
   get '/' do
-    erb :bet_form
+    erb :credit_form
   end
 
-  post '/place-bet' do
-    @bet = params[:bet_amount]
-    erb :index
+  get '/play' do
+    @funds = $fruity.show_balance
+    $fruity.insert_coin
+    erb :play
+  end
+
+  post '/credit' do
+    $fruity = FruitMachine.new(Bank.new(params[:credit].to_i))
+    redirect '/play'
   end
 
   # start the server if ruby file executed directly
