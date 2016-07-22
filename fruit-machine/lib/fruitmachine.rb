@@ -15,6 +15,7 @@ class FruitMachine
   end
 
   def spin_the_wheels
+    clear_the_turn
     SLOTS.times { wheel_one_spin }
     player_turn
   end
@@ -35,6 +36,10 @@ class FruitMachine
     return @bank.hit_the_jackpot if @rules.all_the_same_colour @player_turn
     return @bank.payout_five_times if @rules.two_or_more_adjacent_colours @player_turn
     return @bank.payout_half if @rules.all_different_colours @player_turn
+  end
+
+  def clear_the_turn
+    @player_turn = []
   end
 
 end

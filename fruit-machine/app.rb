@@ -1,6 +1,6 @@
 require 'sinatra/base'
 require_relative './lib/bank'
-
+require_relative './lib/fruitmachine'
 
 
 class Fruity < Sinatra::Base
@@ -13,6 +13,9 @@ class Fruity < Sinatra::Base
   get '/play' do
     @funds = $fruity.show_balance
     $fruity.insert_coin
+    @player_turn = $fruity.player_turn
+    $fruity.spin_the_wheels
+    $fruity.result_of_spin
     erb :play
   end
 

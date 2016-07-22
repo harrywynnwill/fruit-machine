@@ -1,5 +1,50 @@
-<%= @funds %> Credits
 
-<form action="/play">
-  <input type="submit" value="Bet">
-</form>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Play the fruity</title>
+  </head>
+  <body>
+    <%= @funds %> Credits
+    <% if @player_turn[0] == :yellow %>
+      <div class="yellow"></div>
+    <% elsif @player_turn[0] == :blue %>
+      <div class="blue"></div>
+    <% elsif @player_turn[0] == :red %>
+      <div class="red"></div>
+    <% elsif @player_turn[0] == :green %>
+      <div class="green"></div>
+    <% end %>
+    <% if @player_turn[1] == :yellow %>
+      <div class="yellow"></div>
+    <% elsif @player_turn[1] == :blue %>
+      <div class="blue"></div>
+    <% elsif @player_turn[1] == :red %>
+      <div class="red"></div>
+    <% elsif @player_turn[1] == :green %>
+      <div class="green"></div>
+    <% end %>
+    <% if @player_turn[2] == :yellow %>
+      <div class="yellow"></div>
+    <% elsif @player_turn[2] == :blue %>
+      <div class="blue"></div>
+    <% elsif @player_turn[2] == :red %>
+      <div class="red"></div>
+    <% elsif @player_turn[2] == :green %>
+      <div class="green"></div>
+    <% end %>
+    <% if @player_turn[3] == :yellow %>
+      <div class="yellow"></div>
+    <% elsif @player_turn[3] == :blue %>
+      <div class="blue"></div>
+    <% elsif @player_turn[3] == :red %>
+      <div class="red"></div>
+    <% elsif @player_turn[3] == :green %>
+      <div class="green"></div>
+    <% end %>
+    <form action="/play">
+      <input type="submit" value="Bet">
+    </form>
+  </body>
+</html>
