@@ -40,9 +40,7 @@ class Formatter
   end
 
   def party_code_lookup party_codes, party_code
-
     party_codes.select {|code, party_name| code.to_s == party_code}.values[0]
-
   end
 
   def votes_total results
